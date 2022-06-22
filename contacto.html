@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <section >
+            <div class="main-container">
+                <div class="top-side mt-3">
+                    <h2>Dejanos tu Mensaje</h2>
+                    <form onsubmit="login(event)" id="contact-form" class="d-flex flex-column align-items-center w-50 ms-20 bg-form" >
+                        <label for="text">Nombre completo</label>
+                        <input type="text" id="contact-name" required class="form-control" >
+                        <label for="number">DNI</label>
+                        <input type="number" id="contact-dni" required min="6" class="form-control" >
+                        <label for="email">Correo electronico</label>
+                        <input type="email" id="contact-email" required class="form-control" >
+                        <label for="number">Telefono de contacto</label>
+                        <input type="number" id="contact-number" required class="form-control" >
+                        <textarea name="txtar" id="contact-text" placeholder="Dejar un mensaje" cols="30" rows="10" required class="form-control mt-4"></textarea>
+                        <button id="message-send" class="btn btn-primary m-2" type="submit" data-bs-toggle="modal" data-bs-target="#contact-modal">Enviar</button>
+            </form>
+        </div>
+        <!-- Modal de Enviado -->
+        <!-- <div>
+            <div class="modal" id="contact-modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Muchas gracias!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Recibimos tu mensaje </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Mapa -->
+        <div class="bttom-side">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.174141888289!2d-65.20791368514907!3d-26.834412983161396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225dcb49a15ff9%3A0x6a2c27a3b096078b!2sCl%C3%ADnica%20Mayo!5e0!3m2!1ses-419!2sar!4v1655924278534!5m2!1ses-419!2sar" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/contacto.js"></script>
+</body>
+</html>

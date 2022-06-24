@@ -1,4 +1,108 @@
+*{
+    font-weight: 500;
+    box-sizing: border-box !important;
+}
+/* HEADER */
+.nav-item{
+    margin-left: 20px;
+}
+.propio{
+    color: white !important;
+}
+.propio:hover{
+    color: cornflowerblue !important;
+}
+
+/* MAIN */
+
+main{
+    background-image: url("https://blog.uvirtual.org/hubfs/Marketing%20-%20Recursos/Blog/Fotos%20Blog/perfil-de-un-medico.png");
+    background-size: cover;
+    background-position-x: center;
+}
+p span {
+    color: cornflowerblue;
+    font-size: 17px;
+}
+
+/* FOOTER */
+.pie-pagina{
+    width: 100%;
+    background-color: black;
+    }
+    .pie-pagina .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+    }
+    .pie-pagina .grupo-1 .box-figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .pie-pagina .grupo-1 .box-figure img{
+        width: 250px;
+    }
+    .pie-pagina .grupo-1 .box h2{
+        color: #fff;
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+    .pie-pagina .grupo-1 .box p{
+        color: #efefef;
+        margin-bottom: 10px;
+    }
+    .pie-pagina .grupo-1 .red-social a{
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        margin-right: 10px;
+        text-align: center;
+        transition: all 300ms ease;
+    }
+    .pie-pagina .grupo-1 .red-social a:hover{
+        color: cornflowerblue;
+    }
+    .pie-pagina .grupo-2{
+        background-color: #0a1a2a;
+        padding: 15px 10px;
+        text-align: center;
+        color: #fff;
+    }
+    .pie-pagina .grupo-2 small{
+        font-size: 15px;
+    }
+    @media screen and (max-width:800px){
+        .pie-pagina .grupo-1{
+            padding: 35px 0px;
+        }
+}
+    @media screen and (max-width:448px) {
+        .pie-pagina .grupo-1 .red-social a{
+            display: flex;
+            flex-direction: column;
+            margin-left: 40px;
+        }
+        
+    }
+    
+/* Pagina de contacto */
 .main-container{
     background-color: #C6D8FF;
     
+}
+
+/* Pagina principal */
+.customize-image{
+    height: 200px;
+    object-fit: cover;
 }

@@ -21,16 +21,16 @@ let cardio = [
 ]
 
 let clinica = [
-    new Doctor(1,'Dra. Moreno Lazarte, Marcela Cecilia','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgjXEC6FDfOC6PLvGuGsBF2S5z_8g897xsoA&usqp=CAU'),
-    new Doctor(2,'Dr. Morcos, Daniel Alberto','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAyoXjmhhbm8kcRSU3butNehfwaerKW353AQ&usqp=CAU'),
-    new Doctor(3,'',''),
-    new Doctor(4,'','')
+    new Doctor(1,'Dra. Moreno Lazarte, Marcela Cecilia','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYqBVZKG1lqS3eiiQCuR5RtEEc1SS-_uJgDxvuLoylh9HnV1g3X07QisCWOTLZ3iGlkFw&usqp=CAU'),
+    new Doctor(2,'Dr. Morcos, Daniel Alberto','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYaOwBxl9zpesywpimuFBaqbil55_UzYlZGqYoI1WBswjdi7EbREsYIPIA5pDt9I6Jz3w&usqp=CAU'),
+    new Doctor(3,'Dr. Tome Guzmán, Andrés Federico','https://uvn-brightspot.s3.amazonaws.com/assets/vixes/btg/series.batanga.com/files/Los-7-hombres-mas-atractivos-de-Greys-Anatomy.jpg'),
+    new Doctor(4,'Dra. Sabeh, Melisa Ianina','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjFEJsBwsQRbqLBtJuAfQo_tGxFHKlTr6vUQ&usqp=CAU')
 ]
 let neuro =[
     new Doctor(1,'Dra. Ibáñez, Rossana del V.','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqCRBmPidQ8bWUT1B4e_s8AQ3zCrpss6hHz-jTSfDoBsy2c3J-m-HRt52oORX2DQx_37w&usqp=CAU'),
-    new Doctor(2,'',''),
-    new Doctor(3,'',''),
-    new Doctor(4,'','')
+    new Doctor(2,'Dr. Ordóñez, Hernán Esteban','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj4Tlscla6oL0mwJnj_w4ah5gS8B4Dg-UEMMFB8WLU9mWpKHG3SBfgL2FP7AmFxtnYCGg&usqp=CAU'),
+    new Doctor(3,'Dra. Batista, Margarita','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ve3YIL87KDue9j3rQy0jLV8I5aM13lr8LGxAqAK36i1VzleZAM6vkSczeBQ5apuvtiI&usqp=CAU'),
+    new Doctor(4,'Dr. Ovejero, Miguel Adolfo','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz8oRnhCoT5IwMUvNVyWcswhrt3jk6e4HeNjDsQQPIaeG_0d3_W7NNz6r01HB9zpc7j8c&usqp=CAU')
 ]
 
 

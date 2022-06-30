@@ -110,6 +110,11 @@ p span {
 }
 
 /* Detail Page by Feli */
+
+.detail-container{
+    background-color: #d9d9d9;
+}
+
 .detail-image{
     width: 50%;
     height: 350px;

@@ -114,5 +114,17 @@ doctors.forEach(doctor =>{
   </div>
 </div> */}
 
+let userId = localStorage.getItem("user");
+let users = JSON.parse(localStorage.getItem("users"))
+let userActive = users.find(user=>user.id==userId)
+console.log(userActive);
+console.log(userId);
+if (userActive.admin){
+ let adminButton = document.createElement("li");
+ adminButton.classList.add("nav-item", "text-light");
+ adminButton.innerHTML=`
+ <a class="nav-link text-light" href="admin.html" >Administración</a>
 
-
+ `;
+ document.getElementById("options-header").appendChild(adminButton);
+}

@@ -10,7 +10,7 @@
     color: white !important;
 }
 .propio:hover{
-    color: cornflowerblue !important;
+    color: #3C6E71 !important;
 }
 
 /* MAIN */
@@ -28,7 +28,7 @@
 } */
 
 p span {
-    color: cornflowerblue;
+    color: #3C6E71;
     font-size: 17px;
 }
 
@@ -110,12 +110,12 @@ p span {
 }
 
 /* Detail Page by Feli */
-.detail-image{
-    width: 50%;
-    height: 350px;
-    display: flex;
-    justify-content: center;
+
+.detail-back{
+   background-color: #d9d9d9;
 }
+
+
 /* Tabla de turnos */
 .table{
     display: flex;

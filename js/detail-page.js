@@ -6,12 +6,14 @@ let doctor = doctors.find(doctor=>doctor.id == idDoctor);
 
 let detail = document.createElement('div');
 detail.innerHTML = `
-<img class="detail-image mt-3 mb-3" src=${doctor.image}>
+<div class="detail-image text-center mb-3">
+<img src=${doctor.image}>
+</div>
 <h1 class="text-center">${doctor.name}</h1>
 <hr/>
 <p class="h4 text-center">${doctor.description}</p>
 <hr/>
-<p class="h4 text-center mb-4"> Turnos Disponibles</p>
+<p class="h4 text-center mb-3"> Turnos Disponibles</p>
 `
 document.getElementById('detail-container').appendChild(detail);
 

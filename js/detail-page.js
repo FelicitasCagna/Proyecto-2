@@ -46,15 +46,37 @@ appointments.forEach(appointment=>{
     Seleccionar este turno
     </button>
     </td>
+    <div class="modal fade" id="appModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirme su turno</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <p>Indique el motivo de su consulta</p>
+                  <textarea name="txtar" id="contact-text" required placeholder="Dejar un mensaje" cols="30" rows="10" required class="form-control mt-4"></textarea>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar </button>
+                <button type="button" class="btn btn-primary" onclick="deleteApp(${doctor.id})"> Confirmar </button>
+              </div>
+            </div>
+          </div>
+        </div>
     `
     document.querySelector('tbody').appendChild(appRow);
 })
 
-//Seleccionar un turno
+//Seleccionar un turno y eliminarlo
 
 // localStorage.setItem('appointments',JSON.stringify(appointments));
 
-// const takeApp = (id) => {
-//     let appUpdated =  appointments.filter(doctor=>doctor.id !== id);
-//     localStorage.setItem('appointments',JSON.stringify(appUpdated));
-// }
+const deleteApp = (id) => {
+    let doctors = JSON.parse(localStorage.getItem('doctors'));
+    let appUpdated =  appointments.filter(doctor=>doctor.id !== id);
+    localStorage.setItem('appointments',JSON.stringify(appUpdated));
+    window.location.reload();
+}

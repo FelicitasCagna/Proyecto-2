@@ -9,7 +9,7 @@ const contact = (event)=> {
     
     console.log(contactName, contactDNI, contactEmail, contactNumber, contactMessage);
 
-    let contactNameOk = /^[a-zA-Z]{4,35}$/.test(contactName);
+    let contactNameOk = /^([a-z]+[,.]?[ ]?|[a-z]+['-]?)+$/.test(contactName);
     let contactDNIOk = contactDNI.length<=12 && contactDNI.length>=6;
     console.log(contactDNIOk);
     let contactEmailOk = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(contactEmail);
@@ -25,4 +25,18 @@ const contact = (event)=> {
     let messageSend = document.getElementById('contact-form');
     messageSend.appendChild(sendMessage);
     }
+}
+
+// ENVIAR EMAIL AL ADMINISTRADOR
+
+function enviarEmailAdmin(){
+Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "feluucagna@gmail.com",
+    Password : "6D413835EB04A66F7416A89AFA05EAACB725",
+    To : "fpadros9@gmail.com",
+    From : "feluucagna@gmail.com",
+    Subject : "Pagina de contacto ",
+    Body : "Este es un mensaje recibido en la pagina de contacto + `${contactMessage}`",
+}).then((message) => alert(message));
 }

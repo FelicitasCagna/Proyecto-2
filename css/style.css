@@ -10,25 +10,32 @@
     color: white !important;
 }
 .propio:hover{
-    color: cornflowerblue !important;
+    color: #3C6E71 !important;
 }
 
 /* MAIN */
 
-main{
+.cards-back{
     background-image: url("https://blog.uvirtual.org/hubfs/Marketing%20-%20Recursos/Blog/Fotos%20Blog/perfil-de-un-medico.png");
     background-size:cover;
     background-position-x: center;
 }
+
+/* main{
+    background-image: url("https://blog.uvirtual.org/hubfs/Marketing%20-%20Recursos/Blog/Fotos%20Blog/perfil-de-un-medico.png");
+    background-size:cover;
+    background-position-x: center;
+} */
+
 p span {
-    color: cornflowerblue;
+    color: #3C6E71;
     font-size: 17px;
 }
 
 /* FOOTER */
 .pie-pagina{
     width: 100%;
-    background-color: black;
+    background-color: #3C6E71;
     }
     .pie-pagina .grupo-1{
         width: 100%;
@@ -95,14 +102,151 @@ p span {
         
     }
     
-/* Pagina de contacto */
-.main-container{
-    background-color: #C6D8FF;
-    
-}
 
 /* Pagina principal */
 .customize-image{
     height: 200px;
     object-fit: cover;
+}
+
+/* Detail Page by Feli */
+
+.detail-back{
+   background-color: #d9d9d9;
+}
+
+
+/* Tabla de turnos */
+.table{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Pagina de contacto */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #d9d9d9;
+}
+/*** Top Side ***/
+.top-side{
+    width: 100%;
+}
+.top-side iframe{
+    width: 80%;
+    height: 80vh;
+    margin-top: 60px;
+}
+.top-side p{
+    font-size: 1em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form{
+    padding: 0.7em;
+}
+
+/* Bottom-side */
+.bttom-side{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.bttom-side h2{
+    color: white;
+    background-color: #3C6E71;
+    font-size: 1.3em;
+    text-align: center;
+}
+.bttom-side form{
+    margin: 0% 3%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.bttom-side form label{
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+}
+.bttom-side form input{
+    border: 2px #4f6272;
+    border-radius: 0.3em;
+}
+.bttom-side textarea{
+    border: 2px solid white;
+    border-radius: 0.3em;
+    margin: 4% 0%;
+    width: 100%;
+    height: 20vh;
+    resize: none;
+}
+.bttom-side button{
+    width: 50%;
+    background-color: #3C6E71;
+    font-weight: 600;
+    /* border: 2px solid #3c6e71; */
+    border-radius: 0.3em;
+}
+.bttom-side form{
+    margin-bottom: 5%;
+}
+
+.logofo{
+    width: 100%;
+}
+.logofo a{
+    text-align: center;
+}
+.siguenos{
+    padding-top: 14%;
+}
+@media screen and (min-width:700px){
+    form{
+        padding: 0em 4em;
+    }
+    .top-side{
+        padding: 0em 1em;
+    }
+}
+@media screen and (min-width:1000px){
+    .top-side{
+        padding: 0em 0em 0em 0.6em;
+    }
+    .sec-all{
+        display: flex;
+    }
+}
+.bttom-side{
+    margin-top: 3em;
+}
+.bttom-side form{
+    margin: 0;
+}
+.siguenos{
+    padding: 0;
+}
+footer{
+    margin: 0;
+    padding: 0;
+}
+#sb-h1{
+    font-size: 1.7em;
+}
+.top-side{
+    height: 70vh;
+}
+.top-side iframe{
+    height: 80%;
+}
+.sobrenosotros{
+    padding-top: 1%;
+}
+.grupo-1{
+    padding: 0;
 }

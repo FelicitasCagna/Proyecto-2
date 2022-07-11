@@ -1,0 +1,38 @@
+.first-section {
+    background-image: url("https://www.consalud.es/uploads/s1/10/91/16/6/medica-en-su-consulta-foto-freepik.jpeg");
+    height: 92vh;
+    background-size: cover;
+    background-position-y: 50%;
+    
+}
+
+.welcome{
+    display: inline-block;
+    margin: 5% 0 0 13%;
+}
+
+.first-section h3{
+    font-family: 'Staatliches', cursive;
+    font-size: 70px;
+    color: rgb(32, 148, 243);
+}
+
+.w-100{
+    height: 92vh;
+    object-fit: cover;
+    width: 100vw;
+}
+
+.separated-sections{
+    height: 20px;
+    background-color: black;
+}
+
+.btn-primary{
+    background-color: rgb(32, 148, 243) !important;
+    border-color: rgb(32, 148, 243) !important;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    font-size: 18px !important;
+    font-family: 'Staatliches', cursive !important;
+    letter-spacing: 5px;
+
+}

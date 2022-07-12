@@ -1,5 +1,7 @@
 body{
-    background-color: rgb(207, 231, 231) !important;
+    background-image: url("https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    height: 220vh;
+    background-size: cover;
 }
 .about-us-body{
     display: flex;
@@ -30,15 +32,14 @@ body{
 }
 @media screen and (max-width:758px){
     .first-colum{
-        width: 100vw;
-        height: 165vh;
-        margin: 10vh 0vw 10vh 20vw;;
-        padding:  5vh 14vw 150vh 0vw;
-        box-sizing: content-box ;
+        background-color: transparent;
+        margin: 10vh 0vw 10vh 20vw;
+        padding: 5vh 20vw 150vh -10vw;
         font-size: small;
     }
     .card{
         padding-left: 0;
+        margin-right: 7vw;
     }
     .card-body{
         padding: 5vh 10vw 5vh 10vw !important ;

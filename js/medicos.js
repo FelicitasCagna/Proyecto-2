@@ -1,11 +1,14 @@
 class Doctor{
-    constructor(id, name, text, image, description, specialty ){
+    constructor(id, name, text, image, description, specialty, mat, adress, phone ){
     this.id = id;
     this.name = name; 
     this.text = text;
     this.image = image;
     this.description = description;
     this.specialty = specialty;
+    this.mat = mat;
+    this.adress = adress;
+    this.phone = phone;
     }
 }
 

@@ -21,3 +21,9 @@ h1,h2{
     padding: 10px;
     color: rgb(0, 0, 0);
 }
+@media screen and (max-width:400px){
+    .buttom-return{
+        padding: auto;
+    right: 5vw;
+    }
+}

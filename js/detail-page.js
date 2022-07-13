@@ -58,11 +58,11 @@ appointments.forEach(appointment=>{
                 <form>
                   <p>Indique el motivo de su consulta</p>
                   <textarea name="txtar" id="contact-text" required placeholder="Dejar un mensaje" cols="30" rows="10" required class="form-control mt-4"></textarea>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar </button>
+                  <a type="button" class="btn btn-primary" href="404.html"> Confirmar </a>
+                  </div>
                 </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar </button>
-                <button type="button" class="btn btn-primary" onclick="deleteApp(${doctor.id})"> Confirmar </button>
               </div>
             </div>
           </div>

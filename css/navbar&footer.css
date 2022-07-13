@@ -94,6 +94,7 @@
             margin: 0vh 0vw 2vh 0vw;
             color: #fff;
             display: flex;
+            text-decoration: none;
         }
         .about-us{
             display: none;
@@ -101,6 +102,7 @@
         .footer-3{
             display: none;
         }
+        
 
 }
     @media screen and (max-width:448px) {

@@ -35,7 +35,7 @@ let appointments = [
     new Appointment (7 ,'19:00 hs'),
     new Appointment (8 ,'19:30 hs'),
 ]
-
+localStorage.setItem('appointments',JSON.stringify(appointments));
 
 
 appointments.forEach(appointment=>{
@@ -62,7 +62,7 @@ appointments.forEach(appointment=>{
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar </button>
-                <button type="button" class="btn btn-primary" onclick="deleteApp(${doctor.id})"> Confirmar </button>
+                <button onclick="deleteApp(${appointment.id})" type="button" class="btn btn-primary" > Confirmar </button>
               </div>
             </div>
           </div>
@@ -73,11 +73,11 @@ appointments.forEach(appointment=>{
 
 //Seleccionar un turno y eliminarlo
 
-// localStorage.setItem('appointments',JSON.stringify(appointments));
+// localStorage.getItem('appointments',JSON.stringify(appointments));
 
 const deleteApp = (id) => {
-    let doctors = JSON.parse(localStorage.getItem('doctors'));
-    let appUpdated =  appointments.filter(doctor=>doctor.id !== id);
+    let appointments = JSON.parse(localStorage.getItem('appointments'));
+    let appUpdated =  appointments.filter(appointment=>appointment.id !== id);
     localStorage.setItem('appointments',JSON.stringify(appUpdated));
     window.location.reload();
 }

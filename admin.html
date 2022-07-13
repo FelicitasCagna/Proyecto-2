@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración de la clínica</title>
     <link rel="stylesheet" href="css/navbar&footer.css">
+    <link rel="icon" href="IMG/rc.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
@@ -147,9 +148,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="edit-form" onsubmit="editDoctor()">
+            <form id="edit-form" onsubmit="editDoctor(id)">
               <label for="nameDoctor-edit">Nombre</label>
               <input class="form-control" type="text" id="nameDoctor-edit" required maxlength="28" minlength="4">
+              <br>
+              <p>¿Tiene imagen?</p>
+                  <input type="checkbox" id="image-edit">Si
               <br>
               <label for="especialidad-edit">Especialidad</label>
               <input class="form-control" type="text" id="especialidad-edit" required maxlength="28" minlength="4">
@@ -169,6 +173,7 @@
       </div>
     </div>
     <script src="js/admin.js"></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>

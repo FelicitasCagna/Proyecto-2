@@ -11,7 +11,7 @@ detail.innerHTML = `
 </div>
 <h1 class="text-center">${doctor.name}</h1>
 <hr/>
-<p class="h4 text-center">${doctor.description}</p>
+<p class="h4 text-center">${doctor.specialty}</p>
 <hr/>
 <p class="h4 text-center mb-3"> Turnos Disponibles</p>
 `

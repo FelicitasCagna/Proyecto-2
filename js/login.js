@@ -34,12 +34,16 @@ const login = (event)=>{
             localStorage.setItem("user",userFound.id)
             window.location.assign(window.location.origin + "/index.html")
         } else {
-            errorMessage();
+            // window.location.assign(window.location.origin + "/landing-page.html");
         }
     } else {
        errorMessage();
     }
 }
+
+// 1) Si obtuviste el ID, filtra en los doctores hasta encontrar el usuario correspondiente LISTO
+// 2) Hace un if en el que preguntes si no está user (!user)
+// 3) Adentro del if, hace la redirección (window.location.assign(window.location.origin + '/landing.html')
 
 function errorMessage(){
     let error = document.createElement("div");
@@ -50,19 +54,19 @@ function errorMessage(){
        setTimeout(()=>{error.remove()},3000)
 }
 
-function loginEmail(){
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "galileoerazo2000@gmail.com",
-        Password : "38B9BBA023D2C801AC0BD48FF1B3230B138F",
-        To : 'galileoerazo2000@gmail.com',
-        From : "galileoerazo@gmail.com",
-        Subject : "Holas",
-        Body : "Aguante JavaScript :)"
-    }).then(
-      message => alert(message)
-    );
-}
+// function loginEmail(){
+//     Email.send({
+//         Host : "smtp.elasticemail.com",
+//         Username : "galileoerazo2000@gmail.com",
+//         Password : "38B9BBA023D2C801AC0BD48FF1B3230B138F",
+//         To : 'galileoerazo2000@gmail.com',
+//         From : "galileoerazo@gmail.com",
+//         Subject : "Holas",
+//         Body : "Aguante JavaScript :)"
+//     }).then(
+//       message => alert(message)
+//     );
+// }
 
 const register=(event)=>{
     event.preventDefault();
@@ -92,6 +96,6 @@ const register=(event)=>{
             }
             localStorage.setItem("users",JSON.stringify(usersLS))
     } else{
-       alert("Error en las credenciales");
+       alert("Parece que no seguiste las condiciones");
     } 
     }

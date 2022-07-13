@@ -56,23 +56,25 @@ const deleteDoctor = (id) => {
         let doctorToEdit = doctors.find(doctor => doctor.id == id);
         console.log(doctorToEdit);
         let a = document.getElementById('nameDoctor-edit').value = doctorToEdit.name;
-        let b = document.getElementById('especialidad-edit').value = doctorToEdit.especialidad;
-        let c = document.getElementById('matricula-edit').value = doctorToEdit.matricula;
-        let d = document.getElementById('direccion-edit').value = doctorToEdit.direccion;
-        let e = document.getElementById('telefono-edit').value = doctorToEdit.telefono;
-        console.log(a,b,c,d,e);
+        let a1 = document.getElementById('image-edit').value = doctorToEdit.image;
+        let c = document.getElementById('matricula-edit').value = doctorToEdit.mat;
+        let b = document.getElementById('especialidad-edit').value = doctorToEdit.specialty;
+        let d = document.getElementById('direccion-edit').value = doctorToEdit.adress;
+        let e = document.getElementById('telefono-edit').value = doctorToEdit.phone;
+        console.log(a,a1,b,c,d,e);
         document.getElementById('edit-form').setAttribute('onsubmit',`editDoctor(${id})`);
         }
 
         const editDoctor = (id) =>{
             let nameDoctor = document.getElementById('nameDoctor-edit').value;
+            let image = document.getElementById('image-edit').value;
             let especialidad = document.getElementById('especialidad-edit').value;
             let matricula = document.getElementById('matricula-edit').value;
             let direccion = document.getElementById('direccion-edit').value;
             let telefono = document.getElementById('telefono-edit').value;
             let doctors = JSON.parse(localStorage.getItem('doctors'));
             let doctorsUpdated = doctors.filter(doctor=>doctor.id !== id);
-            let doctorUpdated = new Doctor(id,nameDoctor, especialidad, matricula, direccion, telefono);
+            let doctorUpdated = new Doctor(id,nameDoctor, image, matricula, especialidad, direccion, telefono);
             doctorsUpdated.push(doctorUpdated);
             localStorage.setItem('doctors',JSON.stringify(doctorsUpdated));
             }

@@ -55,11 +55,12 @@ const deleteDoctor = (id) => {
         console.log(doctors);
         let doctorToEdit = doctors.find(doctor => doctor.id == id);
         console.log(doctorToEdit);
-        document.getElementById('nameDoctor-edit').value = doctorToEdit.name;
-        document.getElementById('especialidad-edit').value = doctorToEdit.especialidad;
-        document.getElementById('matricula-edit').value = doctorToEdit.matricula;
-        document.getElementById('direccion-edit').value = doctorToEdit.direccion;
-        document.getElementById('telefono-edit').value = doctorToEdit.telefono;
+        let a = document.getElementById('nameDoctor-edit').value = doctorToEdit.name;
+        let b = document.getElementById('especialidad-edit').value = doctorToEdit.especialidad;
+        let c = document.getElementById('matricula-edit').value = doctorToEdit.matricula;
+        let d = document.getElementById('direccion-edit').value = doctorToEdit.direccion;
+        let e = document.getElementById('telefono-edit').value = doctorToEdit.telefono;
+        console.log(a,b,c,d,e);
         document.getElementById('edit-form').setAttribute('onsubmit',`editDoctor(${id})`);
         }
 
@@ -69,7 +70,7 @@ const deleteDoctor = (id) => {
             let matricula = document.getElementById('matricula-edit').value;
             let direccion = document.getElementById('direccion-edit').value;
             let telefono = document.getElementById('telefono-edit').value;
-            let doctors = JSON.parse(localStorage.getItem('products'));
+            let doctors = JSON.parse(localStorage.getItem('doctors'));
             let doctorsUpdated = doctors.filter(doctor=>doctor.id !== id);
             let doctorUpdated = new Doctor(id,nameDoctor, especialidad, matricula, direccion, telefono);
             doctorsUpdated.push(doctorUpdated);

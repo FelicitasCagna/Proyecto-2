@@ -13,39 +13,39 @@
     <!-- navbar  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container container-fluid">
-          <a class="navbar-brand text-light" href="landing-page.html">Clinica Rolling</a>
-          <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand text-light" href="landing-page.html">Clinica Rolling</a>
+        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" id="options-header">
-              <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link active propio" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link propio" href="aboutus.html">Conocenos</a>
-              </li>
-              <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link propio" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle propio" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Especialidades
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle propio" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Especialidades
                   </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="Cardiologia.html">Cardiología</a></li>
-                  <li><a class="dropdown-item" href="clinica.html">Clinicos</a></li>
-                  <li><a class="dropdown-item" href="traumatologia.html">Traumatologia</a></li>
-                  <li><a class="dropdown-item" href="neurologia.html">Neurología</a></li>
+                <li><a class="dropdown-item" href="Cardiologia.html">Cardiología</a></li>
+                <li><a class="dropdown-item" href="clinica.html">Clinicos</a></li>
+                <li><a class="dropdown-item" href="traumatologia.html">Traumatologia</a></li>
+                <li><a class="dropdown-item" href="neurologia.html">Neurología</a></li>
               </ul>
-              </li>
-              <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link propio" href="login.html">Cerrar Sesión</a>
-              </li>
+            </li>
           </ul>
-          </div>
+        </div>
       </div>
-      </nav>
+    </nav>
       <!-- termina navbar  -->
 
       <!--Inicio del Main-->
@@ -147,21 +147,21 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="edit-form">
+            <form id="edit-form" onsubmit="editDoctor()">
               <label for="nameDoctor-edit">Nombre</label>
-              <input class="form-control" type="text" id="nameDoctor-edit" required maxlength="28" minlength="4" placeholder="Nombre del medico">
+              <input class="form-control" type="text" id="nameDoctor-edit" required maxlength="28" minlength="4">
               <br>
               <label for="especialidad-edit">Especialidad</label>
-              <input class="form-control" type="text" id="especialidad-edit" required maxlength="28" minlength="4" placeholder="Especialidad del medico">
+              <input class="form-control" type="text" id="especialidad-edit" required maxlength="28" minlength="4">
               <br>
               <label for="matricula-edit">Matricula</label>
-              <input class="form-control" type="text" id="matricula-edit" required maxlength="10" minlength="4" placeholder="Matricula del medico">
+              <input class="form-control" type="text" id="matricula-edit" required maxlength="10" minlength="4">
               <br>
               <label for="direccion-edit">Dirección</label>
-              <input class="form-control" type="text" id="direccion-edit" required maxlength="28" minlength="4" placeholder="Dirección del medico">
+              <input class="form-control" type="text" id="direccion-edit" required maxlength="28" minlength="4">
               <br>
               <label for="telefono-edit">Telefono</label>
-              <input class="form-control" type="number" id="telefono-edit" required maxlength="10" minlength="9" placeholder="Telefono del medico">
+              <input class="form-control" type="number" id="telefono-edit" required maxlength="10" minlength="9">
               <button type="submit" class="btn btn-primary my-3">Editar medico</button>
             </form>
           </div>

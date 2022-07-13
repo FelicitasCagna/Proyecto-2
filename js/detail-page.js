@@ -37,6 +37,7 @@ let appointments = [
 ]
 
 
+
 appointments.forEach(appointment=>{
     let appRow = document.createElement('tr');
     appRow.innerHTML=`

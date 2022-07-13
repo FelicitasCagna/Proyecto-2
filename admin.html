@@ -13,49 +13,82 @@
     <!-- navbar  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container container-fluid">
-        <a class="navbar-brand text-light" href="landing-page.html">Clinica Rolling</a>
-        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand text-light" href="landing-page.html">Clinica Rolling</a>
+          <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" id="options-header">
-            <li class="nav-item">
+              <li class="nav-item">
               <a class="nav-link active propio" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link propio" href="#">Conocenos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link propio" href="#">Turnos</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle propio" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Especialidades
+              </li>
+              <li class="nav-item">
+              <a class="nav-link propio" href="aboutus.html">Conocenos</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link propio" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle propio" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Especialidades
                   </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Cardiología</a></li>
-                <li><a class="dropdown-item" href="#">Clinicos</a></li>
-                <li><a class="dropdown-item" href="#">Pediatría</a></li>
-                <li><a class="dropdown-item" href="#">Neurología</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Consultas</a></li>
+                  <li><a class="dropdown-item" href="Cardiologia.html">Cardiología</a></li>
+                  <li><a class="dropdown-item" href="clinica.html">Clinicos</a></li>
+                  <li><a class="dropdown-item" href="traumatologia.html">Traumatologia</a></li>
+                  <li><a class="dropdown-item" href="neurologia.html">Neurología</a></li>
               </ul>
-            </li>
-            <li class="nav-item">
+              </li>
+              <li class="nav-item">
               <a class="nav-link propio" href="login.html">Cerrar Sesión</a>
-            </li>
+              </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscador" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
-        </div>
+          </div>
       </div>
-    </nav>
+      </nav>
       <!-- termina navbar  -->
 
       <!--Inicio del Main-->
       <main class="container mt-5">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Agregar
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Agregar medico</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form onsubmit="addDoctor(event)">
+              <div class="modal-body">
+                  <label for="nameDoctor">Nombre</label>
+                  <input class="form-control" type="text" id="nameDoctor" required maxlength="28" minlength="4" placeholder="Nombre del medico">
+                  <br>
+                  <p>¿Tiene imagen?</p>
+                  <input type="checkbox" id="image">Si
+                  <br>
+                  <label for="especialidad">Especialidad</label>
+                  <input class="form-control" type="text" id="especialidad" required maxlength="28" minlength="4" placeholder="Especialidad del medico">
+                  <br>
+                  <label for="matricula">Matricula</label>
+                  <input class="form-control" type="text" id="matricula" required maxlength="10" minlength="4" placeholder="Matricula del medico">
+                  <br>
+                  <label for="direccion">Dirección</label>
+                  <input class="form-control" type="text" id="direccion" required maxlength="28" minlength="4" placeholder="Dirección del medico">
+                  <br>
+                  <label for="telefono">Telefono</label>
+                  <input class="form-control" type="number" id="telefono" required maxlength="10" minlength="9" placeholder="Telefono del medico">
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Guardar medico</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
         <table class="table">
           <thead>
             <tr>
@@ -65,252 +98,76 @@
               <th scope="col">Matrícula</th>
               <th scope="col">Direccion</th>
               <th scope="col">Teléfono</th>
-              <th scope="col">Turnos disponibles</th>
-              <th scope="col">Turnos ocupados</th>
-              <th scope="col">Publicado</th>
               <th scope="col">Borrar Médico</th>
               <th scope="col">Editar Médico</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Dra. Andía González</td>
-              <td>Traumatologia</td>
-              <td>01-114</td>
-              <td>Heras 511</td>
-              <td>3815000000</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Dr. Ortega Enrique</td>
-              <td>Traumatologia</td>
-              <td>01-115</td>
-              <td>Rivadavia 621</td>
-              <td>3815000001</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Dra. Batista</td>
-              <td>Traumatologia</td>
-              <td>01-116</td>
-              <td>Laprida 210</td>
-              <td>4553221</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Dr. Pacios Jorge</td>
-              <td>Traumatologia</td>
-              <td>01-117</td>
-              <td>Av. Sarmiento 850</td>
-              <td>4562121</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td colspan="1">Dr. Lescano, José</td>
-              <td>Cardiología</td>
-              <td>01-118</td>
-              <td>Av. Mitre 111</td>
-              <td>4562122</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td colspan="1">Dr. Rodriguez, Fernando</td>
-              <td>Cardiología</td>
-              <td>01-119</td>
-              <td>Av. Francisco de Aguirre 1050</td>
-              <td>4541212</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">7</th>
-              <td colspan="1">Dra. Cisneros, Mirta</td>
-              <td>Cardiología</td>
-              <td>01-120</td>
-              <td>Av. Mitre 111</td>
-              <td>4562122</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">8</th>
-              <td colspan="1">Dra. Guerrero Molina</td>
-              <td>Cardiología</td>
-              <td>01-121</td>
-              <td>Laprida 421</td>
-              <td>4552149</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">9</th>
-              <td colspan="1">Dra. Moreno, Cecilia</td>
-              <td>Clinica</td>
-              <td>01-122</td>
-              <td>General Paz 570</td>
-              <td>4512881</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">10</th>
-              <td colspan="1">Dr. Morcos, Daniel</td>
-              <td>Clinica</td>
-              <td>01-123</td>
-              <td>General Paz 570</td>
-              <td>4512881</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">11</th>
-              <td colspan="1">Dr. Tome, Andrés</td>
-              <td>Clinica</td>
-              <td>01-124</td>
-              <td>General Paz 570</td>
-              <td>4512881</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">12</th>
-              <td colspan="1">Dra. Sabeh, Melisa</td>
-              <td>Clinica</td>
-              <td>01-125</td>
-              <td>General Paz 570</td>
-              <td>4512881</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">13</th>
-              <td colspan="1">Dra. Ibáñez, Rossana</td>
-              <td>Neurologia</td>
-              <td>01-126</td>
-              <td>Av. Solano vera 1050</td>
-              <td>4210001</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">14</th>
-              <td colspan="1">Dr. Ordóñez, Hernán</td>
-              <td>Neurologia</td>
-              <td>01-127</td>
-              <td>Av. Aconquija 1602</td>
-              <td>4316080</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">15</th>
-              <td colspan="1">Dra. Batista, Margarita</td>
-              <td>Neurologia</td>
-              <td>01-128</td>
-              <td>Av. Aconquija 1602</td>
-              <td>4316080</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
-            <tr>
-              <th scope="row">16</th>
-              <td colspan="1">Dr. Ovejero, Miguel</td>
-              <td>Neurologia</td>
-              <td>01-129</td>
-              <td>Av. Aconquija 1604</td>
-              <td>4316621</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>❌</td>
-              <td>✍</td>
-            </tr>
           </tbody>
         </table>
+        
       </main>
-      
+      <!-- sacar los turnos-->
       <!--Fin del Main-->
 
 <!-- FOOTER  -->
-        <footer class="pie-pagina">
-          <div class="grupo-1">
-              <div class="box mx-5">
-                  <h2>SOBRE NOSOTROS</h2>
-                  <p>Somos una empresa iniciada en 2022 a fin de brindar la mejor atención al cliente</p>
-                  <p>Respaldada por HARVARD COLLEGE - OXFORD ACADEMY - BRITISH MEDICINE </p>
-          </div>
-          <div class="box">
-              <h2>SIGUENOS</h2>
-              <div class="red-social mx-4">
-                  <a href="#" class="fa fa-facebook"></a>
-                  <a href="#" class="fa fa-instagram"></a>
-                  <a href="#" class="fa fa-twitter"></a>
-                  <a href="#" class="fa fa-youtube"></a>
-              </div>
+<footer class="pie-pagina">
+  <div class="grupo-1">
+      <div class="box mx-5">
+          <a href="aboutus.html"><button class="button-about-us-2">SOBRE NOSOTROS</button></a>
+          <h2 class="about-us">SOBRE NOSOTROS</h2>
+          <p>Somos una empresa iniciada en 2022 a fin de brindar la mejor atención al cliente</p>
+          <p>Respaldada por HARVARD COLLEGE - OXFORD ACADEMY - BRITISH MEDICINE </p>
+      </div>
+      <div class="box footer-2">
+          <h2>SIGUENOS</h2>
+          <div class="red-social mx-4">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-youtube"></a>
           </div>
       </div>
-      <div class="grupo-2">
-          <small>&copy; 2022 <b>Clinica Rolling</b>  - TODOS LOS DERECHOS RESERVADOS.</small>
+      <div class="box footer-3">
+          <h2>Para mas informacion sobre las mentes que fundaron Clinica Rolling</h2>
+          <a href="aboutus.html"><button class="button-about-us-1">Haga click aqui</button></a>
       </div>
-  </footer>
+  </div>
+  <div class="grupo-2">
+      <small>&copy; 2022 <b>Clinica Rolling</b>  - TODOS LOS DERECHOS RESERVADOS.</small>
+  </div>
+</footer>
   <!-- Termina footer -->
-
+    <!-- Modales -->
+    <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="edit-form">
+              <label for="nameDoctor-edit">Nombre</label>
+              <input class="form-control" type="text" id="nameDoctor-edit" required maxlength="28" minlength="4" placeholder="Nombre del medico">
+              <br>
+              <label for="especialidad-edit">Especialidad</label>
+              <input class="form-control" type="text" id="especialidad-edit" required maxlength="28" minlength="4" placeholder="Especialidad del medico">
+              <br>
+              <label for="matricula-edit">Matricula</label>
+              <input class="form-control" type="text" id="matricula-edit" required maxlength="10" minlength="4" placeholder="Matricula del medico">
+              <br>
+              <label for="direccion-edit">Dirección</label>
+              <input class="form-control" type="text" id="direccion-edit" required maxlength="28" minlength="4" placeholder="Dirección del medico">
+              <br>
+              <label for="telefono-edit">Telefono</label>
+              <input class="form-control" type="number" id="telefono-edit" required maxlength="10" minlength="9" placeholder="Telefono del medico">
+              <button type="submit" class="btn btn-primary my-3">Editar medico</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/admin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 

@@ -69,10 +69,39 @@
     .pie-pagina .grupo-2 small{
         font-size: 15px;
     }
+    .button-about-us-1{
+        border: 1px solid rgb(101, 196, 209);
+        border-radius: 3%;
+        background-color: rgb(102, 193, 193);
+        padding: 5px 15px 10px;
+        font-size: larger;
+        margin: 0vh 0vw 2vh 0vw;
+        color: #fff;
+    }
+    .button-about-us-2{
+        display: none;
+    }
     @media screen and (max-width:800px){
         .pie-pagina .grupo-1{
             padding: 35px 0px;
         }
+        .button-about-us-2{
+            border: 1px solid rgb(101, 196, 209);
+            border-radius: 3%;
+            background-color: rgb(102, 193, 193);
+            padding: 5px 15px 10px;
+            font-size: larger;
+            margin: 0vh 0vw 2vh 0vw;
+            color: #fff;
+            display: flex;
+        }
+        .about-us{
+            display: none;
+        }
+        .footer-3{
+            display: none;
+        }
+
 }
     @media screen and (max-width:448px) {
         .pie-pagina .grupo-1 .red-social a{
@@ -80,6 +109,8 @@
             flex-direction: column;
             margin-left: 40px;
         }
-        
+        .footer-2{
+            display: none;
+        }
     }
     
